@@ -1,0 +1,102 @@
+/* Colors taken from the saw itself: black handle, silver hinge, steel blade. */
+:root{
+  --black:#111214; --steel:#24272b; --steel-2:#3a3e44;
+  --silver:#c9cdd2; --silver-2:#e9ebee; --paper:#f6f7f8; --white:#fff;
+  --ink:#111214; --ink-2:#3d4248; --muted:#6b7178;
+  --ok:#1f7a3a; --ok-soft:#e5f3e9; --err:#c0261c; --err-soft:#fdecea;
+  --r:16px;
+  --f:"Cairo", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f);font-size:20px;line-height:1.75;font-weight:500;overflow-x:hidden;padding-bottom:96px}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.35;margin:0;font-weight:900}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px}
+.sec{padding:44px 0}
+.sec.dark{background:var(--black);color:var(--white)}
+.sec.white{background:var(--white)}
+.h2{font-size:30px;margin:0 0 18px;text-align:center}
+.center{text-align:center}
+
+/* buttons: big, high contrast, easy to hit */
+.btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:68px;border:0;cursor:pointer;text-decoration:none;
+  background:var(--black);color:var(--white);font-family:var(--f);font-weight:900;font-size:24px;padding:14px 20px;border-radius:var(--r);
+  box-shadow:0 6px 0 var(--steel-2);transition:transform .1s}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 var(--steel-2)}
+.dark .btn,.btn.light{background:var(--white);color:var(--black);box-shadow:0 6px 0 var(--silver)}
+.btn[disabled]{opacity:.7;cursor:wait}
+
+.topbar{background:var(--black);color:var(--white);text-align:center;font-size:18px;font-weight:700;padding:10px 12px;border-bottom:3px solid var(--silver)}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 0;font-weight:900;font-size:26px;letter-spacing:1px}
+.brand small{font-size:14px;letter-spacing:4px;color:var(--muted)}
+
+/* hero */
+.hero-img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;background:var(--silver-2);border:3px solid var(--black)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:36px;margin:20px 0 8px;text-align:center}
+.hero p.sub{font-size:22px;color:var(--ink-2);text-align:center;margin:0 0 18px}
+.pricebox{display:flex;align-items:center;justify-content:center;gap:14px;background:var(--white);border:3px solid var(--black);border-radius:var(--r);padding:14px;margin:0 0 18px}
+.pricebox .p{font-size:52px;font-weight:900;line-height:1}
+.pricebox .p small{font-size:24px}
+.pricebox .cod{font-size:18px;font-weight:800;color:var(--ok);background:var(--ok-soft);border-radius:12px;padding:6px 12px;line-height:1.4}
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.trust li{background:var(--white);border:2px solid var(--silver);border-radius:14px;padding:12px;text-align:center;font-weight:800;font-size:18px;line-height:1.4}
+.trust li span{display:block;font-size:30px}
+
+/* benefits: one big line each */
+.benefits{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.benefits li{display:flex;align-items:center;gap:14px;background:var(--steel);border:2px solid var(--steel-2);border-radius:var(--r);padding:16px;font-size:22px;font-weight:800;line-height:1.45}
+.benefits li i{flex:none;width:52px;height:52px;border-radius:50%;background:var(--white);color:var(--black);display:grid;place-items:center;font-style:normal;font-size:28px;font-weight:900}
+
+.photo{border-radius:var(--r);overflow:hidden;border:3px solid var(--black);margin:0 0 14px;background:var(--silver-2)}
+.photo img{width:100%;height:auto}
+.caption{font-size:22px;font-weight:800;text-align:center;margin:6px 0 0}
+.caption.muted{font-size:19px;font-weight:600;color:var(--ink-2)}
+
+.uses{display:grid;grid-template-columns:1fr 1fr;gap:12px;list-style:none;margin:0;padding:0}
+.uses li{background:var(--white);border:2px solid var(--silver);border-radius:var(--r);padding:16px 10px;text-align:center;font-weight:800;font-size:20px;line-height:1.4}
+.uses li span{display:block;font-size:38px;line-height:1.2;margin-bottom:4px}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{display:flex;gap:14px;align-items:center;background:var(--white);border:2px solid var(--silver);border-radius:var(--r);padding:14px 16px;font-size:21px;font-weight:700;line-height:1.45}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;width:48px;height:48px;border-radius:50%;background:var(--black);color:var(--white);display:grid;place-items:center;font-size:26px;font-weight:900}
+
+/* order form */
+.form{background:var(--white);border:3px solid var(--black);border-radius:20px;padding:20px 16px}
+.form h2{font-size:28px;text-align:center;margin:0 0 6px}
+.form .hint{text-align:center;color:var(--ink-2);margin:0 0 16px;font-size:19px}
+.lbl{display:block;font-size:21px;font-weight:800;margin:16px 0 6px}
+.inp{width:100%;min-height:62px;font-family:var(--f);font-size:22px;font-weight:700;color:var(--ink);background:var(--paper);border:2px solid var(--steel-2);border-radius:14px;padding:10px 14px;outline:none}
+.inp:focus{border-color:var(--black);box-shadow:0 0 0 4px var(--silver);background:var(--white)}
+.inp.bad{border-color:var(--err);background:var(--err-soft)}
+.inp::placeholder{color:#9aa0a6;font-weight:500}
+.err{color:var(--err);font-weight:800;font-size:18px;margin-top:6px;line-height:1.5}
+.qty{display:grid;grid-template-columns:72px 1fr 72px;align-items:center;gap:10px}
+.qty button{min-height:68px;border-radius:14px;border:2px solid var(--black);background:var(--white);font-family:var(--f);font-size:36px;font-weight:900;cursor:pointer;color:var(--black)}
+.qty button:disabled{opacity:.35}
+.qty output{text-align:center;font-size:24px;font-weight:900;line-height:1.3}
+.qty output small{display:block;font-size:17px;color:var(--muted);font-weight:700}
+.total{display:flex;justify-content:space-between;align-items:center;background:var(--black);color:var(--white);border-radius:14px;padding:14px 16px;margin:18px 0 16px;font-size:22px;font-weight:800}
+.total b{font-size:32px}
+.reassure{text-align:center;color:var(--ink-2);font-size:18px;font-weight:700;margin-top:14px;line-height:1.6}
+.hp{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.done{text-align:center}
+.done .big{font-size:64px;line-height:1.1}
+.done .num{display:inline-block;font-size:28px;font-weight:900;letter-spacing:1px;background:var(--silver-2);border:2px dashed var(--black);border-radius:12px;padding:6px 16px;margin:8px 0 14px;direction:ltr}
+
+/* faq */
+.faq details{background:var(--white);border:2px solid var(--silver);border-radius:var(--r);margin-bottom:10px;padding:0 16px}
+.faq summary{cursor:pointer;font-weight:800;font-size:21px;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq summary::after{content:"+";font-size:30px;line-height:1;font-weight:900}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin:0 0 16px;color:var(--ink-2);font-size:20px}
+
+.foot{background:var(--black);color:var(--silver);text-align:center;font-size:16px;padding:24px 12px}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.97);border-top:3px solid var(--black);padding:10px 14px calc(10px + env(safe-area-inset-bottom));transition:transform .25s}
+.sticky.hide{transform:translateY(120%)}
+.sticky .wrap{display:flex;gap:12px;align-items:center;padding:0}
+.sticky .pr{font-weight:900;font-size:26px;white-space:nowrap;line-height:1.1}
+.sticky .pr small{display:block;font-size:14px;color:var(--ok)}
+.sticky .btn{min-height:60px;font-size:22px}
