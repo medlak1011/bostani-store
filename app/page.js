@@ -19,6 +19,7 @@ const USES = [
 
 const FAQ = [
   ["كيفاش كنخلص؟", "كتخلص غير ملي يوصلك المنشار لليد ديالك. ما كتخلص والو قبل."],
+  ["شحال التوصيل؟", "التوصيل فابور لجميع المدن. 199 درهم هي كلشي، ما كاين حتى زيادة."],
   ["واش كيتطوى؟", "إيه. الشفرة كتدخل وسط اليد وكتسد بالزر، والسنان كيبقاو مخبيين. كتهزو فالصاك بلا خوف."],
   ["واش كيقطع الغصون الغليظة؟", "إيه. الشفرة من الفولاذ المقوى والسنان حادين ومزدوجين، كيقطع الغصون الغليظة فثواني."],
   ["كيفاش كنعرف أن الطلبية تسجلات؟", "من بعد ما تعمر الورقة، غادي نعيطو ليك فالتيليفون باش نأكدو معاك. خلي التيليفون مشعول."],
@@ -27,7 +28,7 @@ const FAQ = [
 export default function Page() {
   return (
     <>
-      <div className="topbar">💵 الدفع عند الاستلام · التوصيل لجميع المدن</div>
+      <div className="topbar">🚚 التوصيل فابور لجميع المدن · 💵 الدفع عند الاستلام</div>
       <div className="brand">بستاني <small>BOSTANI</small></div>
 
       <section className="hero">
@@ -37,12 +38,12 @@ export default function Page() {
           <p className="sub">قوي، حاد، وكيتطوى فاليد. ساهل فالخدمة ديال الزيتون والأشجار.</p>
           <div className="pricebox">
             <div className="p">{PRICES.unit} <small>درهم</small></div>
-            <div className="cod">كتخلص<br />ملي يوصلك</div>
+            <div className="cod">التوصيل فابور<br />كتخلص ملي يوصلك</div>
           </div>
           <a href="#order" className="btn">اطلب دابا 👈</a>
           <ul className="trust">
             <li><span>💵</span>الدفع عند الاستلام</li>
-            <li><span>🚚</span>التوصيل لباب الدار</li>
+            <li><span>🚚</span>التوصيل فابور لباب الدار</li>
           </ul>
         </div>
       </section>

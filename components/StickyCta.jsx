@@ -14,7 +14,7 @@ export default function StickyCta({ price }) {
   return (
     <div className={`sticky ${hide ? "hide" : ""}`}>
       <div className="wrap">
-        <div className="pr">{price} درهم<small>الدفع عند الاستلام</small></div>
+        <div className="pr">{price} درهم<small>التوصيل فابور</small></div>
         <a href="#order" className="btn">اطلب دابا</a>
       </div>
     </div>

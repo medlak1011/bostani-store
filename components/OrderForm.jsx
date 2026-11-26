@@ -125,14 +125,14 @@ export default function OrderForm() {
         <label>Website<input tabIndex={-1} autoComplete="off" value={f.website} onChange={(e) => setField("website", e.target.value)} /></label>
       </div>
 
-      <div className="total"><span>المجموع</span><b>{total} درهم</b></div>
+      <div className="total"><span>المجموع<br /><small style={{ fontSize: 16, color: "var(--silver)" }}>التوصيل فابور 🚚</small></span><b>{total} درهم</b></div>
 
       {serverMsg ? <div className="err" role="alert" style={{ marginBottom: 12 }}>⚠ {serverMsg}</div> : null}
 
       <button className="btn" type="submit" disabled={status === "sending"}>
         {status === "sending" ? "صبر شوية…" : "✔ أكد الطلبية"}
       </button>
-      <p className="reassure">💵 ما كتخلص حتى يوصلك المنشار<br />{PRICES.unit} درهم للمنشار الواحد</p>
+      <p className="reassure">💵 ما كتخلص حتى يوصلك المنشار · 🚚 التوصيل فابور<br />{PRICES.unit} درهم للمنشار الواحد</p>
     </form>
   );
 }
